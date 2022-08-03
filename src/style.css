@@ -1,0 +1,126 @@
+.weather {
+  display: block;
+  position: absolute;
+  right: 0;
+  border: 1px solid #44c2e4;
+  border-radius: 4px;
+  margin: 50px;
+  width: 676px;
+  height: 900px;
+  padding: 50px;
+}
+h1 {
+  font-family: "Yeseva One", cursive;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 55px;
+  color: #1f3745;
+}
+.time {
+  display: block;
+  position: absolute;
+  font-size: 12pt;
+  right: 40px;
+  top: 20px;
+}
+p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: #1f3745;
+  margin: 4px;
+}
+.yuor-city {
+  display: block;
+  margin-top: 20px;
+}
+
+.btn-primary {
+  background-color: #44c2e4;
+  color: #1f3745;
+  border: #44c2e4;
+}
+
+.body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: flexs;
+  margin-bottom: 20px;
+}
+
+.body-image {
+  float: left;
+  margin: 40px 0;
+  padding-left: 30px;
+}
+
+.body-temperature {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.body-city {
+  text-align: right;
+  margin-right: 20px;
+}
+
+.main-temperature {
+  font-family: "Yeseva One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  color: #1f3745;
+  margin: 0;
+  padding: 0;
+}
+
+.body-second-text {
+  margin: 0;
+}
+
+.days-list {
+  display: block;
+}
+.card-title {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  margin-top: 20px;
+  text-align: center;
+}
+.card-img-top {
+  width: 80px;
+  height: 70px;
+  display: block;
+  margin: 0 auto;
+}
+
+.card-text {
+  font-size: 16px;
+  text-align: center;
+}
+.text-muted {
+  font-family: "Yeseva One";
+  font-size: 24px;
+  text-align: center;
+}
+.span-small {
+  vertical-align: super;
+  font-size: 10px;
+}
+.f {
+  font-family: "Yeseva One";
+  vertical-align: super;
+  font-size: 20px;
+  outline: none;
+  text-decoration: none;
+}
+.c {
+  font-family: "Yeseva One";
+  outline: none;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 54px;
+  color: #1f3745;
+  margin: 0;
+}
