@@ -4,7 +4,7 @@
   right: 0;
   border: 1px solid #44c2e4;
   border-radius: 4px;
-  margin: 50px;
+  margin: 30px;
   width: 676px;
   height: 900px;
   padding: 50px;
@@ -123,4 +123,14 @@ p {
   font-size: 54px;
   color: #1f3745;
   margin: 0;
+}
+.link {
+  display: flex;
+  justify-content: right;
+  margin-right: 290px;
+  position: relative;
+  top: 950px;
+}
+.bottom-link {
+  font-size: 14px;
 }
