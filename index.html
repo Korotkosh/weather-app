@@ -26,6 +26,7 @@
         <p class="time" id="currekt-time">Wensday, 16:00</p>
 
         <h1>Current WEATHER</h1>
+
         <section class="yuor-city">
           <p>Your City?</p>
           <form class="row g-3">
@@ -51,17 +52,21 @@
             </div>
           </form>
         </section>
+
         <div class="body">
-          <section class="body-image">
-            <img src="Images/MostlyCloudy.svg" alt="mostly cloudy" />
-          </section>
-          <section class="body-text">
+          <div class="col-8">
+            <img
+              src="Images/MostlyCloudy.svg"
+              alt="mostly cloudy"
+              class="body-image"
+            />
+          </div>
+          <div class="col-4">
             <div class="body-temperature">
               <p>
                 <span class="main-temperature" id="corrent-temperature">
                   26</span
                 >
-
                 <a href="#" class="c" id="celsius">°C/</a
                 ><a href="#" class="f" id="fahrenheit">°F</a>
               </p>
@@ -71,9 +76,10 @@
               <h2 id="change-city">Kyiv</h2>
               <p class="body-second-text">Ukraine</p>
             </div>
-          </section>
+          </div>
         </div>
         <br />
+
         <div class="days-list">
           <div class="card-group">
             <div class="card">
