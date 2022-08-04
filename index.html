@@ -23,156 +23,158 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather">
-        <p class="time" id="currekt-time">Wensday, 16:00</p>
+      <div class="weather-wrapper">
+        <div class="weather">
+          <p class="time" id="currekt-time">Wensday, 16:00</p>
 
-        <h1>Current WEATHER</h1>
+          <h1>Current WEATHER</h1>
 
-        <section class="yuor-city">
-          <p>Your City?</p>
-          <form class="row g-3">
-            <div class="col-auto">
-              <label for="inputPassword2" class="visually-hidden"
-                >Enter yuor city</label
-              >
-              <input
-                type="text"
-                class="form-control"
-                id="inputPassword2"
-                placeholder="Enter yuor city"
-              />
-            </div>
-            <div class="col-auto">
-              <button
-                type="submit"
-                class="btn btn-primary mb-3"
-                id="city-button"
-              >
-                ENTER
-              </button>
-            </div>
-          </form>
-        </section>
-
-        <div class="body">
-          <div class="row">
-            <div class="col-8">
-              <img
-                src="Images/MostlyCloudy.svg"
-                alt="mostly cloudy"
-                class="body-image"
-              />
-            </div>
-            <div class="col-4">
-              <div class="body-temperature">
-                <p>
-                  <span class="main-temperature" id="corrent-temperature">
-                    26</span
-                  >
-                  <a href="#" class="c" id="celsius">°C/</a
-                  ><a href="#" class="f" id="fahrenheit">°F</a>
-                </p>
-                <p class="body-second-text">Mostly Cloudy</p>
+          <section class="yuor-city">
+            <p>Your City?</p>
+            <form class="row g-3">
+              <div class="col-auto">
+                <label for="inputPassword2" class="visually-hidden"
+                  >Enter yuor city</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputPassword2"
+                  placeholder="Enter yuor city"
+                />
               </div>
-              <div class="body-city">
-                <h2 id="change-city">Kyiv</h2>
-                <p class="body-second-text">Ukraine</p>
+              <div class="col-auto">
+                <button
+                  type="submit"
+                  class="btn btn-primary mb-3"
+                  id="city-button"
+                >
+                  ENTER
+                </button>
+              </div>
+            </form>
+          </section>
+
+          <div class="body">
+            <div class="row">
+              <div class="col-8">
+                <img
+                  src="Images/MostlyCloudy.svg"
+                  alt="mostly cloudy"
+                  class="body-image"
+                />
+              </div>
+              <div class="col-4">
+                <div class="body-temperature">
+                  <p>
+                    <span class="main-temperature" id="corrent-temperature">
+                      26</span
+                    >
+                    <a href="#" class="c" id="celsius">°C/</a
+                    ><a href="#" class="f" id="fahrenheit">°F</a>
+                  </p>
+                  <p class="body-second-text">Mostly Cloudy</p>
+                </div>
+                <div class="body-city">
+                  <h2 id="change-city">Kyiv</h2>
+                  <p class="body-second-text">Ukraine</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br />
+
+          <div class="days-list">
+            <div class="card-group">
+              <div class="card">
+                <h5 class="card-title">Friday</h5>
+                <img
+                  src="Images/MostlyCloudy.svg"
+                  class="card-img-top"
+                  alt="mostly cloudy"
+                />
+                <div class="card-body">
+                  <p class="card-text">Mostly Cloudy</p>
+                  <p class="card-text">
+                    <small class="text-muted"
+                      >23<span class="span-small">0</span> C</small
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <h5 class="card-title">Saturday</h5>
+                <img src="Images/Sunny.svg" class="card-img-top" alt="sunny" />
+                <div class="card-body">
+                  <p class="card-text">Sunny</p>
+                  <br />
+                  <p class="card-text">
+                    <small class="text-muted"
+                      >30<span class="span-small">0</span> C</small
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <h5 class="card-title">Sunday</h5>
+                <img
+                  src="Images/MostlyCloudy.svg"
+                  class="card-img-top"
+                  alt="mostly cloudy"
+                />
+                <div class="card-body">
+                  <p class="card-text">Mostly Cloudy</p>
+                  <p class="card-text">
+                    <small class="text-muted"
+                      >28<span class="span-small">0</span> C</small
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <h5 class="card-title">Monday</h5>
+                <img
+                  src="Images/Thunderstorm.svg"
+                  class="card-img-top"
+                  alt="storm"
+                />
+                <div class="card-body">
+                  <p class="card-text">Storm</p>
+                  <br />
+                  <p class="card-text">
+                    <small class="text-muted"
+                      >28<span class="span-small">0</span> C</small
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <h5 class="card-title">Tuesday</h5>
+                <img
+                  src="Images/MostlyRainy.svg"
+                  class="card-img-top"
+                  alt="MostlyRainy"
+                />
+                <div class="card-body">
+                  <p class="card-text">Mostly rainy</p>
+                  <p class="card-text">
+                    <small class="text-muted"
+                      >25<span class="span-small">0</span> C</small
+                    >
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <br />
-
-        <div class="days-list">
-          <div class="card-group">
-            <div class="card">
-              <h5 class="card-title">Friday</h5>
-              <img
-                src="Images/MostlyCloudy.svg"
-                class="card-img-top"
-                alt="mostly cloudy"
-              />
-              <div class="card-body">
-                <p class="card-text">Mostly Cloudy</p>
-                <p class="card-text">
-                  <small class="text-muted"
-                    >23<span class="span-small">0</span> C</small
-                  >
-                </p>
-              </div>
-            </div>
-            <div class="card">
-              <h5 class="card-title">Saturday</h5>
-              <img src="Images/Sunny.svg" class="card-img-top" alt="sunny" />
-              <div class="card-body">
-                <p class="card-text">Sunny</p>
-                <br />
-                <p class="card-text">
-                  <small class="text-muted"
-                    >30<span class="span-small">0</span> C</small
-                  >
-                </p>
-              </div>
-            </div>
-            <div class="card">
-              <h5 class="card-title">Sunday</h5>
-              <img
-                src="Images/MostlyCloudy.svg"
-                class="card-img-top"
-                alt="mostly cloudy"
-              />
-              <div class="card-body">
-                <p class="card-text">Mostly Cloudy</p>
-                <p class="card-text">
-                  <small class="text-muted"
-                    >28<span class="span-small">0</span> C</small
-                  >
-                </p>
-              </div>
-            </div>
-            <div class="card">
-              <h5 class="card-title">Monday</h5>
-              <img
-                src="Images/Thunderstorm.svg"
-                class="card-img-top"
-                alt="storm"
-              />
-              <div class="card-body">
-                <p class="card-text">Storm</p>
-                <br />
-                <p class="card-text">
-                  <small class="text-muted"
-                    >28<span class="span-small">0</span> C</small
-                  >
-                </p>
-              </div>
-            </div>
-            <div class="card">
-              <h5 class="card-title">Tuesday</h5>
-              <img
-                src="Images/MostlyRainy.svg"
-                class="card-img-top"
-                alt="MostlyRainy"
-              />
-              <div class="card-body">
-                <p class="card-text">Mostly rainy</p>
-                <p class="card-text">
-                  <small class="text-muted"
-                    >25<span class="span-small">0</span> C</small
-                  >
-                </p>
-              </div>
-            </div>
-          </div>
+        <div class="link">
+          <p class="bottom-link">
+            <a href="https://github.com/Korotkosh/weather-app" target="_blank"
+              >Open-source code</a
+            >
+            by Antonina Korotkosh
+          </p>
         </div>
-      </div>
-      <div class="link">
-        <p class="bottom-link">
-          <a href="https://github.com/Korotkosh/weather-app" target="_blank"
-            >Open-source code</a
-          >
-          by Antonina Korotkosh
-        </p>
       </div>
     </div>
     <script src="src/index.js"></script>

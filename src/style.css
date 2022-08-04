@@ -1,3 +1,11 @@
+.weather-wrapper {
+  display: block;
+  position: absolute;
+  text-align: left;
+  max-width: 700px;
+  width: 676px;
+  right: 0;
+}
 .weather {
   display: block;
   position: absolute;
@@ -56,6 +64,9 @@ p {
 .body-city {
   text-align: center;
 }
+h2 {
+  margin: 20px;
+}
 
 .main-temperature {
   font-family: "Yeseva One";
@@ -68,8 +79,9 @@ p {
 }
 
 .body-second-text {
+  position: relative;
   margin-left: 10px;
-  padding: 0;
+  top: -20px;
 }
 
 .days-list {
@@ -119,10 +131,11 @@ p {
 }
 .link {
   display: flex;
-  justify-content: right;
-  margin-right: 290px;
+  justify-content: left;
   position: relative;
   top: 900px;
+  margin: 0;
+  padding: 0;
 }
 .bottom-link {
   font-size: 14px;
