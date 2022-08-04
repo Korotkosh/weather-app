@@ -6,8 +6,9 @@
   border-radius: 4px;
   margin: 30px;
   width: 676px;
-  height: 900px;
+  height: 850px;
   padding: 50px;
+  max-width: 700px;
 }
 h1 {
   font-family: "Yeseva One", cursive;
@@ -121,7 +122,7 @@ p {
   justify-content: right;
   margin-right: 290px;
   position: relative;
-  top: 950px;
+  top: 900px;
 }
 .bottom-link {
   font-size: 14px;
