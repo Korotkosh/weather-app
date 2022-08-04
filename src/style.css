@@ -59,13 +59,12 @@ p {
 
 .body-temperature {
   margin-top: 40px;
-  margin-bottom: 40px;
 }
 .body-city {
-  text-align: center;
+  text-align: left;
 }
 h2 {
-  margin: 20px;
+  font-size: 64px;
 }
 
 .main-temperature {
