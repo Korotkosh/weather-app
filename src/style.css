@@ -42,14 +42,6 @@ p {
   border: #44c2e4;
 }
 
-.body {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  position: flexs;
-  margin-bottom: 20px;
-}
-
 .body-image {
   float: left;
   margin: 40px 0;
@@ -68,7 +60,7 @@ p {
   font-family: "Yeseva One";
   font-style: normal;
   font-weight: 400;
-  font-size: 64px;
+  font-size: 54px;
   color: #1f3745;
   margin: 0;
   padding: 0;
