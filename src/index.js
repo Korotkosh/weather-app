@@ -30,10 +30,11 @@ function searchCity(city) {
 }
 
 function showTemperature(response) {
-  console.log(response.data);
   let correntTemperature = document.querySelector("#corrent-temperature");
+  let description = document.querySelector("#description");
   let temperature = Math.round(response.data.main.temp);
   correntTemperature.innerHTML = `${temperature}`;
+  description.innerHTML = response.data.weather[0].main;
 }
 
 let cityButton = document.querySelector("#city-button");
