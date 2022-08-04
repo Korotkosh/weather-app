@@ -10,7 +10,13 @@ let days = [
 ];
 let day = days[now.getDay()];
 let hour = now.getHours();
+if (hour < 0) {
+  hour = `0${hour}`;
+}
 let minute = now.getMinutes();
+if (minute < 10) {
+  minute = `0${minute}`;
+}
 let correctTime = document.querySelector(".time");
 correctTime.innerHTML = `${day}, ${hour}:${minute}`;
 
