@@ -42,7 +42,33 @@ function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   correntTemperature.innerHTML = `${temperature}`;
   description.innerHTML = response.data.weather[0].main;
-  country.innerHTML = response.data.sys.countrys[country];
+  let iconElement = document.querySelector(`#icon`);
+  let iconElementAPI = response.data.weather[0].icon;
+
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${iconElementAPI}@2x.png`
+  );
+
+  if (iconElementAPI === "01d" || "01n") {
+    iconElement.setAttribute("src", `./images/sunny.svg`);
+  } else if (iconElementAPI === "02d" || "02n") {
+    iconElement.setAttribute("src", `./images/mostlyCloudy.svg`);
+  } else if (iconElementAPI === "03d" || "03n") {
+    iconElement.setAttribute("src", `./images/cloudy.svg`);
+  } else if (iconElementAPI === "04d" || "04n") {
+    iconElement.setAttribute("src", `./images/brokenClouds.svg`);
+  } else if (iconElementAPI === "09d" || "09n") {
+    iconElement.setAttribute("src", `./images/rain.svg`);
+  } else if (iconElementAPI === "10d" || "10n") {
+    iconElement.setAttribute("src", `./images/mostlyRainy.svg`);
+  } else if (iconElementAPI === "11d" || "11n") {
+    iconElement.setAttribute("src", `./images/thunderstorm.svg`);
+  } else if (iconElementAPI === "13d") {
+    iconElement.setAttribute("src", `./images/snow.svg`);
+  } else if (iconElementAPI === "50d" || "50n") {
+    iconElement.setAttribute("src", `./images/mist.svg`);
+  }
 }
 
 let cityButton = document.querySelector("#city-button");

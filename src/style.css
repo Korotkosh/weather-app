@@ -62,6 +62,7 @@ p {
 }
 .body-city {
   text-align: left;
+  text-transform: capitalize;
 }
 h2 {
   font-size: 64px;
