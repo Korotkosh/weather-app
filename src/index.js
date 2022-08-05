@@ -38,9 +38,11 @@ function searchCity(city) {
 function showTemperature(response) {
   let correntTemperature = document.querySelector("#corrent-temperature");
   let description = document.querySelector("#description");
+  let country = document.querySelector(`#country`);
   let temperature = Math.round(response.data.main.temp);
   correntTemperature.innerHTML = `${temperature}`;
   description.innerHTML = response.data.weather[0].main;
+  country.innerHTML = response.data.sys.countrys[country];
 }
 
 let cityButton = document.querySelector("#city-button");
