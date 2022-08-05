@@ -38,7 +38,9 @@ function searchCity(city) {
 function showTemperature(response) {
   let correntTemperature = document.querySelector("#corrent-temperature");
   let description = document.querySelector("#description");
-  let temperature = Math.round(response.data.main.temp);
+  celsiusLink = response.data.main.temp;
+
+  let temperature = Math.round(celsiusLink);
   correntTemperature.innerHTML = `${temperature}`;
   description.innerHTML = response.data.weather[0].main;
   let iconElement = document.querySelector(`#icon`);
@@ -71,15 +73,15 @@ function showTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
-let cityButton = document.querySelector("#city-button");
-cityButton.addEventListener("click", changeCity);
-
 function fahrenheitLink() {
   let correntTemperature = document.querySelector("#corrent-temperature");
-  let temperature = correntTemperature.innerHTML;
-  temperature = Number(temperature);
-  correntTemperature.innerHTML = Math.round(temperature * 1.8 + 32);
+  correntTemperature.innerHTML = Math.round(celsiusLink * 1.8 + 32);
 }
+
+let celsiusLink = null;
 
 let fahrenheit = document.querySelector("#fahrenheit");
 fahrenheit.addEventListener("click", fahrenheitLink);
+
+let cityButton = document.querySelector("#city-button");
+cityButton.addEventListener("click", changeCity);
