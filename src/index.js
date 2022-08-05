@@ -56,7 +56,7 @@ function showTemperature(response) {
     iconElement.setAttribute("src", `./images/mostlyCloudy.svg`);
   } else if (iconElementAPI === "03d") {
     iconElement.setAttribute("src", `./images/cloudy.svg`);
-  } else if (iconElementAPI === "04d" || "04n") {
+  } else if (iconElementAPI === "04d") {
     iconElement.setAttribute("src", `./images/brokenClouds.svg`);
   } else if (iconElementAPI === "09d") {
     iconElement.setAttribute("src", `./images/rain.svg`);
