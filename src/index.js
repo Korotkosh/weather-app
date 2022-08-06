@@ -29,6 +29,8 @@ function changeCity(event) {
 }
 
 function searchCity(city) {
+  let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+  let units = "metric";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showTemperature);
 }
@@ -99,3 +101,5 @@ celsius.addEventListener("click", celsiusLink);
 
 cityButton = document.querySelector("#city-button");
 cityButton.addEventListener("click", changeCity);
+
+searchCity("Kyiv");
