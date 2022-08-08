@@ -60,6 +60,7 @@ p {
 .body-temperature {
   margin-top: 40px;
 }
+
 .body-city {
   text-align: left;
   text-transform: capitalize;
@@ -113,6 +114,7 @@ h2 {
   vertical-align: super;
   font-size: 10px;
 }
+
 .f {
   font-family: "Yeseva One";
   vertical-align: super;
@@ -120,7 +122,7 @@ h2 {
   outline: none;
   text-decoration: none;
 }
-.activ {
+.body-temperature .activ {
   font-family: "Yeseva One";
   outline: none;
   text-decoration: none;
