@@ -20,6 +20,34 @@ if (minute < 10) {
 let correctTime = document.querySelector(".time");
 correctTime.innerHTML = `${day}, ${hour}:${minute}`;
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Tue", "Wen", "Thu", "Fri", "Str"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      ` 
+              <div class="col-2">
+                <div class="weater-forecast-day">${day}</div>
+                <img
+                  src="images/sunny.svg"
+                  alt="mostly cloudy"
+                  class="weater-forecast-img"
+                />
+                <div class="weather-forecast-temperatures">
+                  <span class="weather-farecast-temperature-max">28°</span>
+                  <span class="weather-farecast-temperature-min">19°</span>
+                </div>
+              </div>
+      `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function changeCity(event) {
   event.preventDefault();
   let cityInput = document.querySelector("#inputPassword2");
@@ -103,3 +131,5 @@ cityButton = document.querySelector("#city-button");
 cityButton.addEventListener("click", changeCity);
 
 searchCity("Kyiv");
+
+displayForecast();
