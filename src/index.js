@@ -20,7 +20,8 @@ if (minute < 10) {
 let correctTime = document.querySelector(".time");
 correctTime.innerHTML = `${day}, ${hour}:${minute}`;
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
@@ -48,19 +49,10 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHTML;
 }
 
-function changeCity(event) {
-  event.preventDefault();
-  let cityInput = document.querySelector("#inputPassword2");
-  let city = document.querySelector("#change-city");
-  city.innerHTML = `${cityInput.value}`;
-  searchCity(cityInput.value);
-}
-
-function searchCity(city) {
+function getForecast(coordinates) {
   let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
-  let units = "metric";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
-  axios.get(apiUrl).then(showTemperature);
+  let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function showTemperature(response) {
@@ -99,6 +91,22 @@ function showTemperature(response) {
     iconElement.setAttribute("src", `./images/mist.svg`);
   }
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
+}
+
+function changeCity(event) {
+  event.preventDefault();
+  let cityInput = document.querySelector("#inputPassword2");
+  let city = document.querySelector("#change-city");
+  city.innerHTML = `${cityInput.value}`;
+  searchCity(cityInput.value);
+}
+
+function searchCity(city) {
+  let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showTemperature);
 }
 
 function fahrenheitLink(event) {
@@ -131,5 +139,3 @@ cityButton = document.querySelector("#city-button");
 cityButton.addEventListener("click", changeCity);
 
 searchCity("Kyiv");
-
-displayForecast();
