@@ -14,7 +14,7 @@
   border-radius: 4px;
   margin: 30px;
   width: 676px;
-  height: 850px;
+  height: 780px;
   padding: 50px;
   max-width: 700px;
 }
@@ -85,31 +85,6 @@ h2 {
   top: -20px;
 }
 
-.days-list {
-  display: block;
-}
-.card-title {
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  margin-top: 20px;
-  text-align: center;
-}
-.card-img-top {
-  width: 80px;
-  height: 70px;
-  display: block;
-  margin: 0 auto;
-}
-
-.card-text {
-  font-size: 16px;
-  text-align: center;
-}
-.text-muted {
-  font-family: "Yeseva One";
-  font-size: 24px;
-  text-align: center;
-}
 .span-small {
   vertical-align: super;
   font-size: 10px;
@@ -133,11 +108,46 @@ h2 {
   cursor: default;
 }
 
+.days-list {
+  display: block;
+  margin: 0 auto;
+  background-color: antiquewhite;
+  border-radius: 4px;
+}
+
+.col-2 {
+  margin: 8px;
+  text-align: center;
+}
+
+.weather-forecast-temperatures {
+  font-family: "Yeseva One";
+  font-size: 18px;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+.weater-forecast-day {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.weater-forecast-img {
+  width: 80px;
+  height: 70px;
+}
+
+.weather-farecast-temperature-min {
+  color: #1f3745;
+  opacity: 0.5;
+}
 .link {
-  display: flex;
-  justify-content: left;
   position: relative;
-  top: 900px;
+  justify-content: left;
+
+  top: 820px;
   margin: 0;
   padding: 0;
 }
