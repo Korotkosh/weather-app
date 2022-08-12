@@ -123,14 +123,15 @@ h2 {
 
 .weather-forecast-temperatures {
   font-family: "Yeseva One";
-  font-size: 18px;
+  font-size: 16px;
   text-align: center;
   margin-top: 10px;
   margin-left: 15px;
   margin-bottom: 10px;
 }
 .weater-forecast-day {
-  font-family: "Yeseva One";
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
   font-size: 20px;
   margin-top: 15px;
   margin-bottom: 10px;

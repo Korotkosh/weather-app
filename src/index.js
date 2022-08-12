@@ -27,12 +27,9 @@ function formatDay(timestamp) {
   return days[day];
 }
 
-function forecastIcon() {
-  let farecastIconAPI = forecastDay.weather[0].icon;
-}
-
 function displayForecast(response) {
   let forecast = response.data.daily;
+  console.log(forecast);
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
@@ -47,9 +44,9 @@ function displayForecast(response) {
                   forecastDay.dt
                 )}</div>
                 <img
-                  src="http://openweathermap.org/img/wn/${iconElementAPI(
+                  src="http://openweathermap.org/img/wn/${
                     forecastDay.weather[0].icon
-                  )}@2x.png"
+                  }@2x.png"
                   alt="mostly cloudy"
                   class="weater-forecast-img"
                 />
