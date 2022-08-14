@@ -27,6 +27,35 @@ function formatDay(timestamp) {
   return days[day];
 }
 
+function showForecastIcon() {
+  let forecastIcon = document.querySelector("#forecast-icon");
+  let forecastIconAPI = response.data.daily.weather[0].icon;
+  forecastIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${forecastIcon}@2x.png`
+  );
+
+  if (forecastIconAPI === "01d" || forecastIconAPI === "01n") {
+    forecastIcon.setAttribute("src", `./images/sunny.svg`);
+  } else if (forecastIconAPI === "02d" || forecastIconAPI === "02n") {
+    forecastIcon.setAttribute("src", `./images/mostlyCloudy.svg`);
+  } else if (forecastIconAPI === "03d" || forecastIconAPI === "03n") {
+    forecastIcon.setAttribute("src", `./images/cloudy.svg`);
+  } else if (forecastIconAPI === "04d" || forecastIconAPI === "04n") {
+    forecastIcon.setAttribute("src", `./images/brokenClouds.svg`);
+  } else if (forecastIconAPI === "09d" || forecastIconAPI === "09n") {
+    forecastIcon.setAttribute("src", `./images/rain.svg`);
+  } else if (forecastIconAPI === "10d" || forecastIconAPI === "10n") {
+    forecastIcon.setAttribute("src", `./images/mostlyRainy.svg`);
+  } else if (forecastIconAPI === "11d" || forecastIconAPI === "11n") {
+    forecastIcon.setAttribute("src", `./images/thunderstorm.svg`);
+  } else if (forecastIconAPI === "13d" || forecastIconAPI === "13n") {
+    forecastIcon.setAttribute("src", `./images/snow.svg`);
+  } else if (forecastIconAPI === "50d" || forecastIconAPI === "50n") {
+    forecastIcon.setAttribute("src", `./images/mist.svg`);
+  }
+}
+
 function displayForecast(response) {
   let forecast = response.data.daily;
 
@@ -44,9 +73,7 @@ function displayForecast(response) {
                   forecastDay.dt
                 )}</div>
                 <img
-                  src="http://openweathermap.org/img/wn/${
-                    forecastDay.weather[0].icon
-                  }@2x.png"
+                  "${showForecastIcon}"
                   alt="mostly cloudy"
                   class="weater-forecast-img"
                 />
@@ -109,7 +136,6 @@ function showTemperature(response) {
     iconElement.setAttribute("src", `./images/mist.svg`);
   }
   iconElement.setAttribute("alt", response.data.weather[0].description);
-  console.log(response.data);
 
   getForecast(response.data.coord);
 }
