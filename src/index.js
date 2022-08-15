@@ -27,35 +27,6 @@ function formatDay(timestamp) {
   return days[day];
 }
 
-function showForecastIcon() {
-  let forecastIcon = document.querySelector("#forecast-icon");
-  let forecastIconAPI = response.data.daily.weather[0].icon;
-  forecastIcon.setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/${forecastIcon}@2x.png`
-  );
-
-  if (forecastIconAPI === "01d" || forecastIconAPI === "01n") {
-    forecastIcon.setAttribute("src", `./images/sunny.svg`);
-  } else if (forecastIconAPI === "02d" || forecastIconAPI === "02n") {
-    forecastIcon.setAttribute("src", `./images/mostlyCloudy.svg`);
-  } else if (forecastIconAPI === "03d" || forecastIconAPI === "03n") {
-    forecastIcon.setAttribute("src", `./images/cloudy.svg`);
-  } else if (forecastIconAPI === "04d" || forecastIconAPI === "04n") {
-    forecastIcon.setAttribute("src", `./images/brokenClouds.svg`);
-  } else if (forecastIconAPI === "09d" || forecastIconAPI === "09n") {
-    forecastIcon.setAttribute("src", `./images/rain.svg`);
-  } else if (forecastIconAPI === "10d" || forecastIconAPI === "10n") {
-    forecastIcon.setAttribute("src", `./images/mostlyRainy.svg`);
-  } else if (forecastIconAPI === "11d" || forecastIconAPI === "11n") {
-    forecastIcon.setAttribute("src", `./images/thunderstorm.svg`);
-  } else if (forecastIconAPI === "13d" || forecastIconAPI === "13n") {
-    forecastIcon.setAttribute("src", `./images/snow.svg`);
-  } else if (forecastIconAPI === "50d" || forecastIconAPI === "50n") {
-    forecastIcon.setAttribute("src", `./images/mist.svg`);
-  }
-}
-
 function displayForecast(response) {
   let forecast = response.data.daily;
 
@@ -73,7 +44,7 @@ function displayForecast(response) {
                   forecastDay.dt
                 )}</div>
                 <img
-                  "${showForecastIcon}"
+                  src="images/${forecastDay.weather[0].icon}.svg"
                   alt="mostly cloudy"
                   class="weater-forecast-img"
                 />
@@ -117,23 +88,23 @@ function showTemperature(response) {
   );
 
   if (iconElementAPI === "01d" || iconElementAPI === "01n") {
-    iconElement.setAttribute("src", `./images/sunny.svg`);
+    iconElement.setAttribute("src", `./images/01d.svg`);
   } else if (iconElementAPI === "02d" || iconElementAPI === "02n") {
-    iconElement.setAttribute("src", `./images/mostlyCloudy.svg`);
+    iconElement.setAttribute("src", `./images/02d.svg`);
   } else if (iconElementAPI === "03d" || iconElementAPI === "03n") {
-    iconElement.setAttribute("src", `./images/cloudy.svg`);
+    iconElement.setAttribute("src", `./images/03d.svg`);
   } else if (iconElementAPI === "04d" || iconElementAPI === "04n") {
-    iconElement.setAttribute("src", `./images/brokenClouds.svg`);
+    iconElement.setAttribute("src", `./images/04d.svg`);
   } else if (iconElementAPI === "09d" || iconElementAPI === "09n") {
-    iconElement.setAttribute("src", `./images/rain.svg`);
+    iconElement.setAttribute("src", `./images/09d.svg`);
   } else if (iconElementAPI === "10d" || iconElementAPI === "10n") {
-    iconElement.setAttribute("src", `./images/mostlyRainy.svg`);
+    iconElement.setAttribute("src", `./images/10d.svg`);
   } else if (iconElementAPI === "11d" || iconElementAPI === "11n") {
-    iconElement.setAttribute("src", `./images/thunderstorm.svg`);
+    iconElement.setAttribute("src", `./images/11d.svg`);
   } else if (iconElementAPI === "13d" || iconElementAPI === "13n") {
-    iconElement.setAttribute("src", `./images/snow.svg`);
+    iconElement.setAttribute("src", `./images/13d.svg`);
   } else if (iconElementAPI === "50d" || iconElementAPI === "50n") {
-    iconElement.setAttribute("src", `./images/mist.svg`);
+    iconElement.setAttribute("src", `./images/50d.svg`);
   }
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
